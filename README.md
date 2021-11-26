@@ -34,3 +34,11 @@ Test/Exercise project for JavaCommunity
 
 Good. Breaking stuff is a good way to learn stuff.
 Feel free to commit WHATEVER you want with this repo, as long as you have fun!
+
+
+
+# Other info #
+- The project uses Java 17  (Because why not!)
+- JavaFX is already imported, but you have to use the SceneBuilder version for java11+
+- Module-info is configured as *open* because...well...'cause I suck with module-info  *shrugs*  ¯\\_(ツ)_/¯
+
