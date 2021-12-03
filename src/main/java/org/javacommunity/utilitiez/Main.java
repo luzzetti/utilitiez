@@ -11,8 +11,10 @@ import org.javacommunity.utilitiez.services.scavenger.hyperbeast.Scavenger;
 
 import java.io.IOException;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
+import java.util.function.Predicate;
 import java.util.logging.Logger;
 
 public class Main {
@@ -33,7 +35,10 @@ public class Main {
 
         final List<Path> filesFound = myTestScavenger.findAll();
 
+        if(filesFound.isEmpty()) System.out.println("FOLDER IS EMPTY!");
+
         System.out.println("I'm gonna print all the files I found!");
+
         filesFound.forEach(System.out::println);
 
         System.out.println();
@@ -52,10 +57,11 @@ public class Main {
         System.out.println("I'm gonna print the duplicated files found: ");
         duplicates.forEach(System.out::println);
 
+        System.out.println();
 
-//        final Map<Path, String> unknownFiles = myTestAnalyzer.getUnknownFiles(filesFound);
-//        System.out.println("I'm gonna print a map of the unknown files, and their most probable type");
-//        unknownFiles.entrySet().forEach(System.out::println);
+        final Map<Path, String> unknownFiles = myTestAnalyzer.getUnknownFiles(filesFound);
+        System.out.println("I'm gonna print a map of the unknown files, and their most probable type");
+        unknownFiles.entrySet().forEach(System.out::println);
 
         // Testing my reporting service
 //        ReportingService myTestReporting = new CsvReportingServiceImpl();

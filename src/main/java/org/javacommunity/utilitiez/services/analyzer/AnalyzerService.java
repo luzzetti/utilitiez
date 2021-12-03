@@ -37,6 +37,6 @@ public interface AnalyzerService {
      * @return all the files without extensions, and a string with the most probable type
      *
      */
-    Map<Path, String> getUnknownFiles(List<Path> files);
+    Map<Path, String> getUnknownFiles(List<Path> files) throws NoSuchAlgorithmException, IOException;
 
 }

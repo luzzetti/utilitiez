@@ -13,7 +13,7 @@ public class Scavenger implements ScavengerService {
 
     @Override
     public List<Path> findAll() {
-        Path path = Paths.get("C:", "Users", "serge", "OneDrive", "Desktop", "test1");
+        Path path = Paths.get("C:", "Users", "serge", "OneDrive", "Desktop", "test");
 
         File dir = new File(String.valueOf(path));
 
