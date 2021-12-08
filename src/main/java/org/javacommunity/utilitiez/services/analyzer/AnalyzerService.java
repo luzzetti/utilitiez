@@ -1,6 +1,8 @@
 package org.javacommunity.utilitiez.services.analyzer;
 
+import java.io.IOException;
 import java.nio.file.Path;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -17,7 +19,7 @@ public interface AnalyzerService {
      *
      * @return a Set of all the duplicated files.
      */
-    Set<Path> getDuplicates(List<Path> files);
+    Set<Path> getDuplicates(List<Path> files) throws NoSuchAlgorithmException, IOException;
 
     /***
      *
@@ -35,6 +37,6 @@ public interface AnalyzerService {
      * @return all the files without extensions, and a string with the most probable type
      *
      */
-    Map<Path, String> getUnknownFiles(List<Path> files);
+    Map<Path, String> getUnknownFiles(List<Path> files) throws NoSuchAlgorithmException, IOException;
 
 }
