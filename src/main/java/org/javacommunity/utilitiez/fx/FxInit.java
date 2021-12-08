@@ -14,12 +14,18 @@ import java.io.IOException;
 
 public class FxInit extends Application {
 
+
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainFx.class.getResource("MainFx.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Utilitiez - By JavaCommunity");
+
+        stage.setWidth(800);
+        stage.setHeight(700);
+
         stage.setScene(scene);
+
         stage.show();
     }
 
