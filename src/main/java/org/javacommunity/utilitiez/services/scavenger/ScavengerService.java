@@ -23,5 +23,4 @@ public interface ScavengerService {
      * @return a List of all the regular files matching the predicate
      */
     List<Path> findAll(Predicate<Path> filter);
-
 }
